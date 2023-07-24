@@ -1,0 +1,156 @@
+body {
+    overflow-x: hidden;
+  }
+  
+  #myCarousel {
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  /* Adjust the width of the carousel container */
+  .carousel-container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    overflow-x: auto;
+  }
+  
+  /* Small square boxes with information */
+  .box {
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: #FF1A5B;
+    margin: 0 5px;
+    border-radius: 12px;
+    justify-content: flex-end;
+    font-size: 14px;
+    color: #000000;
+    font-weight: bold;
+    font-family: Arial, sans-serif; /* Use a web-safe font */
+  }
+  
+  .upper-half {
+    padding: 20px;
+    color: white !important;
+  }
+  
+  .bottom-box {
+    width: 400px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: white;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+    margin: 0px;
+  }
+  
+  /* Apply styles to the individual content divs */
+  .box-modules,
+  .box-instructor,
+  .grade-feedback,
+  .progress-bar {
+    margin-bottom: 15px;
+  }
+  
+  /* Change the background color to blue when the box is being hovered */
+  .box:hover {
+    background-color: #4741FF;
+  }
+  
+  /* Add new class for the clicked state */
+  .box.clicked {
+    background-color: #4741FF;
+  }
+  
+  /* Grade and Feedback row */
+  .grade-feedback {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 0 0 12px 12px;
+  }
+  
+  /* Pop-up styles */
+  .popup {
+    padding: 10px;
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  
+  /* Close button styles */
+  .close-btn {
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  /* Progress bar */
+  /* Remove margin at the bottom of the progress bar */
+  .progress-bar {
+    height: 10px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  
+  /* Apply styles to the progress fill */
+  .progress-fill {
+    height: 100%;
+    background-color: #007bff; /* Replace with desired progress bar color */
+  }
+  
+  /* Styles for the grade and feedback buttons */
+  .grade,
+  .feedback {
+    cursor: pointer;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  /* Adjust appearance of the grade and feedback buttons on hover */
+  .grade:hover,
+  .feedback:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Remove the default arrow styles for carousel controls */
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+  
+  /* Set a minimum width for the carousel-inner to ensure all boxes can be displayed properly */
+  .carousel-inner {
+    min-width: max-content;
+  }
+  
