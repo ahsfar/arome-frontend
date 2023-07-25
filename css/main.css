@@ -1,27 +1,93 @@
-body {
+body{
+    margin: 0;
+    padding: 0;
     overflow-x: hidden;
-  }
-  
-  #myCarousel {
+   background-color :rgb(214, 230, 240);
+}
+
+.intro{
+    display: flex;
+    padding: 30px;
+    margin-top: 40px;
+    margin: 50px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.intro .dp-img img{
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.intro .introdetails{
+    padding: 20px;
+}
+
+.intro .introdetails .details h4{
+    color: red;
+}
+
+.intro .bio{
+    padding: 60px ;
+    width: 370px;
+}
+
+.intro .bio h4{
+    font-size: 20px;
+}
+
+.btn{
+    margin-top: 90px;
+    margin-left: 50px;
+}
+.btn button{
+    display: inline-block;
+  padding: 18px 34px;
+  border-radius: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.btn .view{
+    background-color: rgb(104, 104, 243);
+  color: white;
+  border: 1px solid transparent;
+}
+
+.btn .add{
+    background-color: rgb(243, 104, 104);
+  color: white;
+  border: 1px solid transparent;
+  font-size: 20px;
+}
+
+#myCarousel {
     max-width: calc(100% - 40px);
     margin: 20px auto;
     padding: 10px;
     border-radius: 20px;
     background-color: #f0f0f0;
-  }
-  
-  /* Adjust the width of the carousel container */
-  .carousel-container {
+}
+
+/* Adjust the width of the carousel container */
+
+.carousel-container {
     max-width: 100%;
     margin: 20px auto;
     padding: 20px;
     border-radius: 20px;
     background-color: #f0f0f0;
     overflow-x: auto;
-  }
-  
+}
+
   /* Small square boxes with information */
-  .box {
+
+.box {
     width: 400px;
     height: 300px;
     border: 1px solid #ccc;
@@ -37,14 +103,14 @@ body {
     color: #000000;
     font-weight: bold;
     font-family: Arial, sans-serif; /* Use a web-safe font */
-  }
-  
-  .upper-half {
+}
+
+.upper-half {
     padding: 20px;
     color: white !important;
-  }
-  
-  .bottom-box {
+}
+
+.bottom-box {
     width: 400px;
     height: 150px;
     display: flex;
@@ -54,38 +120,35 @@ body {
     padding: 20px;
     border-radius: 0 0 12px 12px;
     margin: 0px;
-  }
-  
+}
+
   /* Apply styles to the individual content divs */
-  .box-modules,
-  .box-instructor,
-  .grade-feedback,
-  .progress-bar {
+
+.box-modules
+.box-instructor
+.grade-feedback
+.progress-bar {
     margin-bottom: 15px;
-  }
-  
-  /* Change the background color to blue when the box is being hovered */
-  .box:hover {
+}
+
+.box:hover {
     background-color: #4741FF;
-  }
-  
-  /* Add new class for the clicked state */
-  .box.clicked {
+}
+
+.box.clicked {
     background-color: #4741FF;
-  }
-  
-  /* Grade and Feedback row */
-  .grade-feedback {
+}
+
+.grade-feedback {
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
     background-color: #ffffff;
     padding: 8px;
     border-radius: 0 0 12px 12px;
-  }
-  
-  /* Pop-up styles */
-  .popup {
+}
+
+.popup {
     padding: 10px;
     border: 1px solid #ccc;
     display: none;
@@ -98,59 +161,63 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     z-index: 1;
-  }
-  
-  /* Close button styles */
-  .close-btn {
+}
+
+.close-btn {
     float: right;
     cursor: pointer;
     position: absolute;
     top: 5px;
     right: 5px;
     cursor: pointer;
-  }
-  
+}
+
   /* Progress bar */
   /* Remove margin at the bottom of the progress bar */
-  .progress-bar {
+
+.progress-bar {
     height: 10px;
     background-color: #f1f1f1;
     border-radius: 5px;
     overflow: hidden;
     margin-bottom: 0;
-  }
-  
-  /* Apply styles to the progress fill */
-  .progress-fill {
+}
+
+/* Apply styles to the progress fill */
+
+.progress-fill {
     height: 100%;
     background-color: #007bff; /* Replace with desired progress bar color */
-  }
-  
-  /* Styles for the grade and feedback buttons */
-  .grade,
-  .feedback {
+}
+
+/* Styles for the grade and feedback buttons */
+
+.grade
+.feedback {
     cursor: pointer;
     padding: 8px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
     margin-right: 10px;
-  }
-  
-  /* Adjust appearance of the grade and feedback buttons on hover */
-  .grade:hover,
-  .feedback:hover {
-    background-color: #f1f1f1;
-  }
-  
-  /* Remove the default arrow styles for carousel controls */
-  .carousel-control-prev,
-  .carousel-control-next {
+}
+
+/* Adjust appearance of the grade and feedback buttons on hover */
+
+.grade:hover
+.feedback:hover {
+  background-color: #f1f1f1;
+}
+
+/* Remove the default arrow styles for carousel controls */
+
+.carousel-control-prev
+.carousel-control-next {
     display: none;
-  }
-  
-  /* Set a minimum width for the carousel-inner to ensure all boxes can be displayed properly */
-  .carousel-inner {
+}
+
+/* Set a minimum width for the carousel-inner to ensure all boxes can be displayed properly */
+
+.carousel-inner {
     min-width: max-content;
-  }
-  
+}
