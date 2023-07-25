@@ -221,3 +221,67 @@ body{
 .carousel-inner {
     min-width: max-content;
 }
+
+label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+  }
+
+ 
+
+  input[type="file"] {
+
+    display: none;
+
+    margin-bottom: 10px;
+
+  }
+
+
+
+
+  label[for="cv"] {
+
+  background-color: #ef806c;
+
+  color: white;
+
+  padding: 12px 24px;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+}
+
+
+
+
+label[for="cv"]:hover {
+
+  background-color: #3e8e41;
+
+}
+
+ 
+
+  input[type="submit"] {
+
+    background-color: #4CAF50;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    cursor: pointer;
+
+  }
