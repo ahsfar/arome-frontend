@@ -401,3 +401,38 @@ input[type="submit"] {
     cursor: pointer;
     border-radius: 8px;
   }
+
+
+ /* view batch css */
+.descript, 
+.myMods, 
+.trainees {
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+
+.myMods table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.myMods th, .myMods td {
+
+    padding: 10px;
+    text-align: left;
+    border: none; 
+}
+
+.trainees ul {
+    
+    list-style: none;
+    padding: 0;
+}
+
+.trainees li {
+    margin-bottom: 5px;
+}
