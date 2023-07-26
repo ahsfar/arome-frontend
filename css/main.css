@@ -285,3 +285,119 @@ label[for="cv"]:hover {
     cursor: pointer;
 
   }
+
+  /* Course Page css */
+  /* body{
+    margin: 20px;
+    padding: 10px;
+    background-color :rgb(214, 230, 240);
+} */
+
+.main{
+    /* padding: 60px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding-top: 40px;
+    background-color: white; */
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+
+}
+
+.main h1{
+    font-size: 60px;
+}
+
+.main h3{
+    color: gray;
+}
+
+.main ul li{
+    font-size: 20px;
+    padding: 10px;
+}
+
+.details{
+    /* padding: 30px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    padding-top: 10px;
+    background-color: white; */
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+}
+
+.details h3{
+    color: grey;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 10px;
+
+  }
+  td {
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+  }
+  button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="file"] {
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  label[for="work"] {
+  background-color: #ef806c;
+  color: white;
+  width: 70px;
+  margin-left: 320px;
+  padding: 12px 24px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+label[for="work"]:hover {
+  background-color: #3e8e41;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }

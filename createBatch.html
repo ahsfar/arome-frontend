@@ -4,44 +4,43 @@
     <title>Create Batch Page</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Custom CSS -->
     <style>
         body {
             background-color: #f0f0f0;
         }
-
+    
         .container {
             margin-top: 50px;
-            margin-bottom: 20px;
-            max-width: 800px;
+            max-width: 600px;
             padding: 20px;
             border-radius: 10px;
             background-color: #f0f0f0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
-
+    
         .form-group {
             margin-bottom: 20px;
         }
-
+    
         .form-control {
             border-radius: 5px;
         }
-
+    
         .btn-primary {
-            margin: 10px;
-            padding: 10px;
             background-color: #FF1A5B;
             color: white;
             border: none;
             border-radius: 5px;
-            width: 100px;
+            width: 150px;
         }
-
+    
         .btn-primary:hover {
             background-color: #4741FF;
         }
-
+    
         .alert-danger {
             background-color: #f8d7da;
             color: #721c24;
@@ -49,22 +48,43 @@
             border-radius: 5px;
             font-size: 14px;
         }
-
+    
         /* Style for invalid form fields */
         .form-control:invalid {
             border: 1px solid #dc3545;
         }
-
+    
         .form-control:invalid:focus {
             border-color: #dc3545;
             box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
         }
-
-
+    
+        /* Additional styles to match the first style */
+        .main-container {
+            max-width: 800px;
+        }
+    
+        .btn-add-module {
+            width: 150px;
+        }
+    
+        .module-container {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    
+        .module-heading {
+            margin-right: auto;
+            font-weight: bold;
+        }
     </style>
+    
 </head>
 <body>
-    <div class="container">
+    <div class="main-container container">
         <h2 class="mb-4">Create Batch</h2>
         <!-- <div th:text="${errorMsg}" class="alert alert-danger mb-3"></div> -->
         <form method="post" action="/createBatch" class="needs-validation" novalidate>
@@ -98,52 +118,58 @@
             </div>
             <!-- End of Start and End Date in One Row -->
 
-            <!-- New Container for Module -->
-            <div class="module-container">
-                <h2 class="mb-4">Module</h2>
-
-                <!-- Start and End Date in One Row -->
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="moduleStartDate">Start Date</label>
-                            <input type="date" name="moduleStartDate" id="moduleStartDate" class="form-control" required>
-                            <div class="invalid-feedback">Please provide a valid module start date.</div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="moduleEndDate">End Date</label>
-                            <input type="date" name="moduleEndDate" id="moduleEndDate" class="form-control" required>
-                            <div class="invalid-feedback">Please provide a valid module end date.</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End of Start and End Date in One Row -->
-
-                <div class="form-group">
-                    <label for="trainer">Trainer</label>
-                    <select name="trainer" id="trainer" class="form-control col-md-6" required>
-                        <option value="Krish">Krish</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a trainer.</div>
-                </div>
-                <div class="form-group">
-                    <label for="course">Course</label>
-                    <select name="course" id="course" class="form-control col-md-6" required>
-                        <option value="Java">Java</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a course.</div>
-                </div>
+            <div class="row">
+                <h4 class="module-heading col-md-6">Module</h4>
+                <button type="button" class="btn btn-primary btn-add-module col-md-6" onclick="addModuleContainer()"><i class="fas fa-plus"></i> Add Module</button>
             </div>
-            <!-- End of Module Container -->
+<div id="invisible">
+                        <!-- Default Module Container -->
+                        <div class="module-container">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="moduleStartDate">Start Date</label>
+                                        <input type="date" name="moduleStartDate" id="moduleStartDate" class="form-control" required>
+                                        <div class="invalid-feedback">Please provide a valid module start date.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="moduleEndDate">End Date</label>
+                                        <input type="date" name="moduleEndDate" id="moduleEndDate" class="form-control" required>
+                                        <div class="invalid-feedback">Please provide a valid module end date.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="trainer">Trainer</label>
+                                <select name="trainer" id="trainer" class="form-control col-md-6" required>
+                                    <option value="Krish">Krish</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a trainer.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="course">Course</label>
+                                <select name="course" id="course" class="form-control col-md-6" required>
+                                    <option value="Java">Java</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a course.</div>
+                            </div>
+                        </div>
+                        <!-- End of Default Module Container -->
+                    </div>
 
-            <!-- Button to Add More Module Containers -->
-            <button type="button" class="btn btn-primary" onclick="addModuleContainer()">Add Module <i class="fas fa-plus"></i></button>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-create-batch mt-4" onclick="createBatch()"><i class="fas fa-save"></i> Create Batch</button>
+                        </div>
 
-            <button type="submit" class="btn btn-primary">Create</button>
         </form>
+
     </div>
+
+ 
+
+
 
     <!-- Bootstrap JS (Optional if you want to use Bootstrap components like modal, etc.) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -152,10 +178,109 @@
     <script>
         // Function to add more module containers
         function addModuleContainer() {
-            const moduleContainer = document.querySelector('.module-container');
-            const newModuleContainer = moduleContainer.cloneNode(true);
-            document.querySelector('.container').appendChild(newModuleContainer);
+            const moduleContainer = document.createElement('div');
+            moduleContainer.classList.add('module-container');
+
+            const moduleRow = document.createElement('div');
+            moduleRow.classList.add('row');
+
+            const colLeft = document.createElement('div');
+            colLeft.classList.add('col-md-6');
+
+            const colRight = document.createElement('div');
+            colRight.classList.add('col-md-6');
+
+            const formGroupStartDate = document.createElement('div');
+            formGroupStartDate.classList.add('form-group');
+
+            const labelStartDate = document.createElement('label');
+            labelStartDate.textContent = 'Start Date';
+
+            const inputStartDate = document.createElement('input');
+            inputStartDate.setAttribute('type', 'date');
+            inputStartDate.setAttribute('name', 'moduleStartDate');
+            inputStartDate.classList.add('form-control');
+            inputStartDate.required = true;
+
+            formGroupStartDate.appendChild(labelStartDate);
+            formGroupStartDate.appendChild(inputStartDate);
+            colLeft.appendChild(formGroupStartDate);
+
+            const formGroupEndDate = document.createElement('div');
+            formGroupEndDate.classList.add('form-group');
+
+            const labelEndDate = document.createElement('label');
+            labelEndDate.textContent = 'End Date';
+
+            const inputEndDate = document.createElement('input');
+            inputEndDate.setAttribute('type', 'date');
+            inputEndDate.setAttribute('name', 'moduleEndDate');
+            inputEndDate.classList.add('form-control');
+            inputEndDate.required = true;
+
+            formGroupEndDate.appendChild(labelEndDate);
+            formGroupEndDate.appendChild(inputEndDate);
+            colRight.appendChild(formGroupEndDate);
+
+            moduleRow.appendChild(colLeft);
+            moduleRow.appendChild(colRight);
+            moduleContainer.appendChild(moduleRow);
+
+            const formGroupTrainer = document.createElement('div');
+            formGroupTrainer.classList.add('form-group');
+
+            const labelTrainer = document.createElement('label');
+            labelTrainer.textContent = 'Trainer';
+
+            const selectTrainer = document.createElement('select');
+            selectTrainer.setAttribute('name', 'trainer');
+            selectTrainer.classList.add('form-control', 'col-md-6');
+            selectTrainer.required = true;
+
+            const optionTrainer = document.createElement('option');
+            optionTrainer.textContent = 'Krish';
+            selectTrainer.appendChild(optionTrainer);
+
+            formGroupTrainer.appendChild(labelTrainer);
+            formGroupTrainer.appendChild(selectTrainer);
+            moduleContainer.appendChild(formGroupTrainer);
+
+            const formGroupCourse = document.createElement('div');
+            formGroupCourse.classList.add('form-group');
+
+            const labelCourse = document.createElement('label');
+            labelCourse.textContent = 'Course';
+
+            const selectCourse = document.createElement('select');
+            selectCourse.setAttribute('name', 'course');
+            selectCourse.classList.add('form-control', 'col-md-6');
+            selectCourse.required = true;
+
+            const optionCourse = document.createElement('option');
+            optionCourse.textContent = 'Java';
+            selectCourse.appendChild(optionCourse);
+
+            formGroupCourse.appendChild(labelCourse);
+            formGroupCourse.appendChild(selectCourse);
+            moduleContainer.appendChild(formGroupCourse);
+
+            document.querySelector('#invisible').appendChild(moduleContainer);
+        }
+
+
+
+
+        // Function to handle form submission and create batch
+        function createBatch() {
+            const form = document.getElementById('batchForm');
+            if (form.checkValidity()) {
+                // Add your logic for creating the batch here...
+                form.submit(); // Submit the form if all fields are valid
+            } else {
+                form.classList.add('was-validated');
+            }
         }
     </script>
+
 </body>
 </html>
