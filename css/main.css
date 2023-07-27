@@ -46,27 +46,6 @@ body{
     font-size: 20px;
 }
 
-/*
-.btn button {
-    display: inline-block;
-    padding: 18px 34px;
-    border-radius: 15px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 15px;
-}
-.btn .view {
-    background-color: rgb(104, 104, 243);
-    color: white;
-    border: 1px solid transparent;
-}
-.btn .add {
-    background-color: rgb(243, 104, 104);
-    color: white;
-    border: 1px solid transparent;
-    font-size: 20px;
-}  */
-
 label,
 button.view {
     display: flex;
@@ -168,50 +147,6 @@ input[type="submit"] {
         color: white;
       }
 
-/* .btn {
-    margin-top: 80px;
-    text-align: right;
-} */
-/* .btn {
-    margin-top: 80px;
-    text-align: right; }
-label {
-    display: flex;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-
-  input[type="file"] {
-    display: none;
-    margin-bottom: 10px;
-  }
-  label[for="cv"] {
-  background-color: #FF1A5B;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 15px;
-  cursor: pointer;
-}
-label[for="cv"]:hover {
-    background-color: #4741FF;
-}
-  input[type="submit"] {
-    background-color: #FF1A5B;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-  } */
-/* Carousel container */
-
-#myCarousel {
-    max-width: calc(100% - 40px);
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: #f0f0f0;
-}
 
 /* Adjust the width of the carousel container */
 
@@ -425,19 +360,10 @@ label[for="cv"]:hover {
 
   }
 
-  /* Course Page css */
-  /* body{
-    margin: 20px;
-    padding: 10px;
-    background-color :rgb(214, 230, 240);
-} */
+
 
 .main{
-    /* padding: 60px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    padding-top: 40px;
-    background-color: white; */
+
     max-width: calc(100% - 40px);
     margin: 20px auto;
     padding: 10px;
@@ -460,11 +386,7 @@ label[for="cv"]:hover {
 }
 
 .details{
-    /* padding: 30px;
-    border: 1px solid transparent;
-    border-radius: 5px;
-    padding-top: 10px;
-    background-color: white; */
+
     max-width: calc(100% - 40px);
     margin: 20px auto;
     padding: 10px;
