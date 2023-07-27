@@ -147,3 +147,38 @@ boxes.forEach(box => {
             }
         }
         // createbatch.html completed
+
+
+
+        // handling buttons in the first container of user profile
+
+            // Handle View CV button click
+    document.getElementById('viewCVBtn').addEventListener('click', () => {
+        // Replace 'cv_file_path.pdf' with the actual path of your CV file
+        const cvFilePath = 'cv_file_path.pdf';
+        window.location.href = cvFilePath;
+      });
+  
+      // Handle Upload CV button click
+    //   document.getElementById('cvFileInput').addEventListener('change', (event) => {
+    //     const file = event.target.files[0];
+    //     if (file) {
+    //       // Perform any further actions with the selected file if needed
+    //       console.log('File selected:', file.name);
+    //     }
+    //   });
+  
+      // Handle Submit button click
+      document.getElementById('submitBtn').addEventListener('click', () => {
+        // Implement your logic to submit the uploaded files here
+        console.log('Submit button clicked');
+      });
+
+      document.getElementById("cvFileInput").addEventListener("change", function() {
+        var selectedFile = this.files[0];
+        if (selectedFile) {
+          document.getElementById("selectedFile").value = selectedFile.name;
+        } else {
+          document.getElementById("selectedFile").value = "";
+        }
+      });

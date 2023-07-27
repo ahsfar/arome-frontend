@@ -17,6 +17,7 @@ body{
     background-color: #f0f0f0;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .intro .dp-img img {
@@ -45,10 +46,6 @@ body{
     font-size: 20px;
 }
 
- .btn {
-    margin-top: 80px;
-    text-align: right; }
-
 /*
 .btn button {
     display: inline-block;
@@ -58,13 +55,11 @@ body{
     text-decoration: none;
     font-size: 15px;
 }
-
 .btn .view {
     background-color: rgb(104, 104, 243);
     color: white;
     border: 1px solid transparent;
 }
-
 .btn .add {
     background-color: rgb(243, 104, 104);
     color: white;
@@ -72,6 +67,114 @@ body{
     font-size: 20px;
 }  */
 
+label,
+button.view {
+    display: flex;
+    /* margin-bottom: 10px; */
+    font-weight: bold;
+}
+
+input[type="file"] {
+    display: none;
+    /* margin-bottom: 10px; */
+}
+
+label.cv-label,
+label.cv-btn,
+button.view {
+    background-color: #FF1A5B;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+label.cv-label:hover,
+button.view:hover {
+    background-color: #4741FF;
+}
+
+input[type="submit"] {
+    background-color: #FF1A5B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Custom styles */
+
+.cv-section {
+    border-color: #FF1A5B;
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.custom-btn {
+    background-color: #FF1A5B;
+    font-weight: bold;
+    color: white;
+    border-radius: 15px;
+    padding: 12px 24px;
+    /* display: flex; */
+}
+
+.custom-btn:hover {
+  background-color: #4741FF;
+  color: white;
+}
+
+.button-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+    /* Style for the custom file input button */
+    .custom-file-input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+    
+      /* Style for the container div of the custom file input button */
+      .custom-file-container {
+        position: relative;
+        overflow: hidden;
+      }
+    
+      /* Style for the "Browse File" button */
+      .btn-custom-file {
+        /* display: inline-block; */
+        color: #fff;
+        background-color: #FF1A5B;
+        font-weight: bold;
+        color: white;
+        border-radius: 15px;
+        padding: 12px 24px;
+      }
+      .btn-custom-file:hover {
+        background-color: #4741FF;
+        color: white;
+      }
+
+/* .btn {
+    margin-top: 80px;
+    text-align: right;
+} */
+/* .btn {
+    margin-top: 80px;
+    text-align: right; }
 label {
     display: flex;
     margin-bottom: 10px;
@@ -82,7 +185,6 @@ label {
     display: none;
     margin-bottom: 10px;
   }
-
   label[for="cv"] {
   background-color: #FF1A5B;
   color: white;
@@ -90,11 +192,9 @@ label {
   border-radius: 15px;
   cursor: pointer;
 }
-
 label[for="cv"]:hover {
     background-color: #4741FF;
 }
-
   input[type="submit"] {
     background-color: #FF1A5B;
     color: white;
@@ -102,8 +202,7 @@ label[for="cv"]:hover {
     border: none;
     border-radius: 15px;
     cursor: pointer;
-  }
-
+  } */
 /* Carousel container */
 
 #myCarousel {
@@ -480,3 +579,51 @@ input[type="submit"] {
 .heading {
     color:rgb(243, 104, 104)
 }
+
+
+/* Admin buttons css */
+
+.btn-square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    font-size: 24px;
+    text-align: center;
+    background-color: #FF1A5B; 
+    transition: background-color 0.3s ease; 
+    color: white;
+    margin: 30px;
+  }
+  
+  .btn-square:hover {
+    background-color: #4741FF; /* Set the background color on hover */
+    color: white;
+  }
+  
+  .admin-container{
+    padding: 30px;
+    margin-top: 40px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: white;
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .admin-container .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  
+  .admin-container .row .col:last-child { 
+    flex: 1;
+  }
