@@ -42,7 +42,16 @@ boxes.forEach(box => {
 
 
         // createbatch.html
-        // Function to add more module containers
+           // Function to add more module containers
+        
+           function displayTrainer(){
+        	
+        	alert(document.getElementById('trainer').options.length);
+        	
+        }
+        
+        let moduleIndex = 1;
+        
         function addModuleContainer() {
             const moduleContainer = document.createElement('div');
             moduleContainer.classList.add('module-container');
@@ -64,7 +73,7 @@ boxes.forEach(box => {
 
             const inputStartDate = document.createElement('input');
             inputStartDate.setAttribute('type', 'date');
-            inputStartDate.setAttribute('name', 'moduleStartDate');
+            inputStartDate.setAttribute('name', 'moduleStartDateString[]');
             inputStartDate.classList.add('form-control');
             inputStartDate.required = true;
 
@@ -80,7 +89,7 @@ boxes.forEach(box => {
 
             const inputEndDate = document.createElement('input');
             inputEndDate.setAttribute('type', 'date');
-            inputEndDate.setAttribute('name', 'moduleEndDate');
+            inputEndDate.setAttribute('name', 'moduleEndDateString[]');
             inputEndDate.classList.add('form-control');
             inputEndDate.required = true;
 
@@ -92,20 +101,26 @@ boxes.forEach(box => {
             moduleRow.appendChild(colRight);
             moduleContainer.appendChild(moduleRow);
 
-            const formGroupTrainer = document.createElement('div');
+			const formGroupTrainer = document.createElement('div');
             formGroupTrainer.classList.add('form-group');
-
             const labelTrainer = document.createElement('label');
             labelTrainer.textContent = 'Trainer';
-
+            
             const selectTrainer = document.createElement('select');
-            selectTrainer.setAttribute('name', 'trainer');
+            selectTrainer.setAttribute('name', 'fk_trainerId[]');
             selectTrainer.classList.add('form-control', 'col-md-6');
             selectTrainer.required = true;
-
-            const optionTrainer = document.createElement('option');
-            optionTrainer.textContent = 'Krish';
-            selectTrainer.appendChild(optionTrainer);
+            
+            const listLength = document.getElementById('trainer').options.length;
+            const select = document.getElementById('trainer');          
+            const optionTrainer = select.options;
+            
+            for (var i = 0; i < listLength; i++){
+            	const option = document.createElement('option');
+            	option.value = optionTrainer[i].value;
+            	option.text = optionTrainer[i].text;
+            	selectTrainer.appendChild(option);
+            }
 
             formGroupTrainer.appendChild(labelTrainer);
             formGroupTrainer.appendChild(selectTrainer);
@@ -118,17 +133,26 @@ boxes.forEach(box => {
             labelCourse.textContent = 'Course';
 
             const selectCourse = document.createElement('select');
-            selectCourse.setAttribute('name', 'course');
+            selectCourse.setAttribute('name', 'fk_courseId[]');
             selectCourse.classList.add('form-control', 'col-md-6');
             selectCourse.required = true;
-
-            const optionCourse = document.createElement('option');
-            optionCourse.textContent = 'Java';
-            selectCourse.appendChild(optionCourse);
+            
+            const courseListLength = document.getElementById('course').options.length;
+            const courseSelect = document.getElementById('course');          
+            const courseOption = courseSelect.options;
+            
+            for (var i = 0; i < courseListLength; i++){
+            	const option = document.createElement('option');
+            	option.value = courseOption[i].value;
+            	option.text = courseOption[i].text;
+            	selectCourse.appendChild(option);
+            }
 
             formGroupCourse.appendChild(labelCourse);
             formGroupCourse.appendChild(selectCourse);
             moduleContainer.appendChild(formGroupCourse);
+            
+            moduleIndex++;
 
             document.querySelector('#invisible').appendChild(moduleContainer);
         }

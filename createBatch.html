@@ -14,11 +14,18 @@
     <div class="main-container container">
         <h2 class="mb-4">Create Batch</h2>
         <!-- <div th:text="${errorMsg}" class="alert alert-danger mb-3"></div> -->
-        <form method="post" action="/createBatch" class="needs-validation" novalidate>
+        <form method="post" action="/test_streamModuleRegister" class="needs-validation" novalidate>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" name="name" id="name" class="form-control col-md-6" required>
                 <div class="invalid-feedback">Please provide a valid name.</div>
+            </div>
+            <div class="form-group">
+            	<label for="streamId">Stream ID</label>
+            		<select name="streamId" id="streamId" class="form-control col-md-6" required>
+            			<option th:each="stream : ${streamList}" th:value="${stream.streamId}" th:text="${stream.streamId}"></option>
+            		</select>
+            <div class="invalid-feedback">Please select a trainer.</div>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
@@ -31,14 +38,14 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="startDate">Start Date</label>
-                        <input type="date" name="startDate" id="startDate" class="form-control" required>
+                        <input type="date" name="smStartDate" id="smStartDate" class="form-control" required>
                         <div class="invalid-feedback">Please provide a valid start date.</div>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="endDate">End Date</label>
-                        <input type="date" name="endDate" id="endDate" class="form-control" required>
+                        <input type="date" name="smEndDate" id="smEndDate" class="form-control" required>
                         <div class="invalid-feedback">Please provide a valid end date.</div>
                     </div>
                 </div>
@@ -48,6 +55,7 @@
             <div class="row">
                 <h4 class="module-heading col-md-6">Module</h4>
                 <button type="button" class="btn btn-primary btn-add-module col-md-6" onclick="addModuleContainer()"><i class="fas fa-plus"></i> Add Module</button>
+<!--                 <button type="button" class="btn btn-primary btn-add-module col-md-6" onclick="displayTrainer()"><i class="fas fa-plus"></i> Add Module</button> -->
             </div>
 <div id="invisible">
                         <!-- Default Module Container -->
@@ -56,29 +64,29 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="moduleStartDate">Start Date</label>
-                                        <input type="date" name="moduleStartDate" id="moduleStartDate" class="form-control" required>
+                                        <input type="date" name="moduleStartDateString[]" id="moduleStartDate" class="form-control" required>
                                         <div class="invalid-feedback">Please provide a valid module start date.</div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="moduleEndDate">End Date</label>
-                                        <input type="date" name="moduleEndDate" id="moduleEndDate" class="form-control" required>
+                                        <input type="date" name="moduleEndDateString[]" id="moduleEndDate" class="form-control" required>
                                         <div class="invalid-feedback">Please provide a valid module end date.</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="trainer">Trainer</label>
-                                <select name="trainer" id="trainer" class="form-control col-md-6" required>
-                                    <option value="Krish">Krish</option>
+                                <select name="fk_trainerId[]" id="trainer" class="form-control col-md-6" required>
+                                    <option th:each="user : ${trainerList}" id="test" th:value="${user.userId}" th:text="${user.userId + ' - ' + user.firstName + ' ' + user.lastName}"></option>
                                 </select>
                                 <div class="invalid-feedback">Please select a trainer.</div>
                             </div>
                             <div class="form-group">
                                 <label for="course">Course</label>
-                                <select name="course" id="course" class="form-control col-md-6" required>
-                                    <option value="Java">Java</option>
+                                <select name="fk_courseId[]" id="course" class="form-control col-md-6" required>
+                                    <option th:each="course : ${courseList}" th:value="${course.courseId}" th:text="${course.courseId + ' - ' + course.name}"></option>
                                 </select>
                                 <div class="invalid-feedback">Please select a course.</div>
                             </div>
