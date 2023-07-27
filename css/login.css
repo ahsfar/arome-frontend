@@ -1,0 +1,34 @@
+body {
+    background-color: #f0f0f0;
+  }
+
+  .login-container {
+    max-width: 520px;
+    margin: 100px auto;
+    padding: 80px 20px; /* Adjust the padding here to make the container slightly smaller */
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .login-btn {
+    background-color: #FF1A5B;
+    color: white;
+    padding: 12px 30px; /* Increase the padding to make the button bigger */
+    margin-top: 20px; /* Move the button down slightly */
+  }
+
+  .login-btn:hover {
+    background-color: #4741FF;
+  }
+
+  .login-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }

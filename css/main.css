@@ -4,18 +4,22 @@ body{
     overflow-x: hidden;
    background-color :rgb(214, 230, 240);
 }
-
-.intro{
-    display: flex;
+.intro {
     padding: 30px;
     margin-top: 40px;
-    margin: 50px;
     border: 1px solid transparent;
     border-radius: 5px;
     background-color: white;
+    max-width: calc(100% - 40px);
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
 }
 
-.intro .dp-img img{
+.intro .dp-img img {
     width: 190px;
     height: 190px;
     border-radius: 50%;
@@ -23,48 +27,84 @@ body{
     margin-top: 50px;
 }
 
-.intro .introdetails{
-    padding: 20px;
+.intro .introdetails {
+    padding: 30px;
+    width: 400px;
 }
 
-.intro .introdetails .details h4{
+.intro .introdetails .details h4 {
     color: red;
 }
 
-.intro .bio{
-    padding: 60px ;
-    width: 370px;
+.intro .bio {
+    padding: 60px;
+    width: 500px;
 }
 
-.intro .bio h4{
+.intro .bio h4 {
     font-size: 20px;
 }
 
-.btn{
-    margin-top: 90px;
-    margin-left: 50px;
-}
-.btn button{
+ .btn {
+    margin-top: 80px;
+    text-align: right; }
+
+/*
+.btn button {
     display: inline-block;
-  padding: 18px 34px;
-  border-radius: 15px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 15px;
+    padding: 18px 34px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-.btn .view{
+.btn .view {
     background-color: rgb(104, 104, 243);
-  color: white;
-  border: 1px solid transparent;
+    color: white;
+    border: 1px solid transparent;
 }
 
-.btn .add{
+.btn .add {
     background-color: rgb(243, 104, 104);
+    color: white;
+    border: 1px solid transparent;
+    font-size: 20px;
+}  */
+
+label {
+    display: flex;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  input[type="file"] {
+    display: none;
+    margin-bottom: 10px;
+  }
+
+  label[for="cv"] {
+  background-color: #FF1A5B;
   color: white;
-  border: 1px solid transparent;
-  font-size: 20px;
+  padding: 12px 24px;
+  border-radius: 15px;
+  cursor: pointer;
 }
+
+label[for="cv"]:hover {
+    background-color: #4741FF;
+}
+
+  input[type="submit"] {
+    background-color: #FF1A5B;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+/* Carousel container */
 
 #myCarousel {
     max-width: calc(100% - 40px);
@@ -435,4 +475,8 @@ input[type="submit"] {
 
 .trainees li {
     margin-bottom: 5px;
+}
+
+.heading {
+    color:rgb(243, 104, 104)
 }

@@ -1,4 +1,6 @@
 
+
+
 // JavaScript to show pop-up on click
 function showPopup(popupId) {
     const popup = document.querySelector(`.${popupId}`);
@@ -21,3 +23,127 @@ boxes.forEach(box => {
         box.classList.add('clicked');
     });
 });
+
+
+
+        document.getElementById('accountType').addEventListener('change', function () {
+            var accountType = this.value;
+            var streamModuleDiv = document.getElementById('streamModuleDiv');
+            var statusDiv = document.getElementById('statusDiv');
+
+            if (accountType === 'Consultant') {
+                streamModuleDiv.style.display = 'block';
+                statusDiv.style.display = 'block';
+            } else {
+                streamModuleDiv.style.display = 'none';
+                statusDiv.style.display = 'none';
+            }
+        });
+
+
+        // createbatch.html
+        // Function to add more module containers
+        function addModuleContainer() {
+            const moduleContainer = document.createElement('div');
+            moduleContainer.classList.add('module-container');
+
+            const moduleRow = document.createElement('div');
+            moduleRow.classList.add('row');
+
+            const colLeft = document.createElement('div');
+            colLeft.classList.add('col-md-6');
+
+            const colRight = document.createElement('div');
+            colRight.classList.add('col-md-6');
+
+            const formGroupStartDate = document.createElement('div');
+            formGroupStartDate.classList.add('form-group');
+
+            const labelStartDate = document.createElement('label');
+            labelStartDate.textContent = 'Start Date';
+
+            const inputStartDate = document.createElement('input');
+            inputStartDate.setAttribute('type', 'date');
+            inputStartDate.setAttribute('name', 'moduleStartDate');
+            inputStartDate.classList.add('form-control');
+            inputStartDate.required = true;
+
+            formGroupStartDate.appendChild(labelStartDate);
+            formGroupStartDate.appendChild(inputStartDate);
+            colLeft.appendChild(formGroupStartDate);
+
+            const formGroupEndDate = document.createElement('div');
+            formGroupEndDate.classList.add('form-group');
+
+            const labelEndDate = document.createElement('label');
+            labelEndDate.textContent = 'End Date';
+
+            const inputEndDate = document.createElement('input');
+            inputEndDate.setAttribute('type', 'date');
+            inputEndDate.setAttribute('name', 'moduleEndDate');
+            inputEndDate.classList.add('form-control');
+            inputEndDate.required = true;
+
+            formGroupEndDate.appendChild(labelEndDate);
+            formGroupEndDate.appendChild(inputEndDate);
+            colRight.appendChild(formGroupEndDate);
+
+            moduleRow.appendChild(colLeft);
+            moduleRow.appendChild(colRight);
+            moduleContainer.appendChild(moduleRow);
+
+            const formGroupTrainer = document.createElement('div');
+            formGroupTrainer.classList.add('form-group');
+
+            const labelTrainer = document.createElement('label');
+            labelTrainer.textContent = 'Trainer';
+
+            const selectTrainer = document.createElement('select');
+            selectTrainer.setAttribute('name', 'trainer');
+            selectTrainer.classList.add('form-control', 'col-md-6');
+            selectTrainer.required = true;
+
+            const optionTrainer = document.createElement('option');
+            optionTrainer.textContent = 'Krish';
+            selectTrainer.appendChild(optionTrainer);
+
+            formGroupTrainer.appendChild(labelTrainer);
+            formGroupTrainer.appendChild(selectTrainer);
+            moduleContainer.appendChild(formGroupTrainer);
+
+            const formGroupCourse = document.createElement('div');
+            formGroupCourse.classList.add('form-group');
+
+            const labelCourse = document.createElement('label');
+            labelCourse.textContent = 'Course';
+
+            const selectCourse = document.createElement('select');
+            selectCourse.setAttribute('name', 'course');
+            selectCourse.classList.add('form-control', 'col-md-6');
+            selectCourse.required = true;
+
+            const optionCourse = document.createElement('option');
+            optionCourse.textContent = 'Java';
+            selectCourse.appendChild(optionCourse);
+
+            formGroupCourse.appendChild(labelCourse);
+            formGroupCourse.appendChild(selectCourse);
+            moduleContainer.appendChild(formGroupCourse);
+
+            document.querySelector('#invisible').appendChild(moduleContainer);
+        }
+
+
+
+
+        // Function to handle form submission and create batch
+        function createBatch() {
+            const form = document.getElementById('batchForm');
+            if (form.checkValidity()) {
+                // Add your logic for creating the batch here...
+                form.submit(); // Submit the form if all fields are valid
+            } else {
+                form.classList.add('was-validated');
+            }
+        }
+        // createbatch.html completed
