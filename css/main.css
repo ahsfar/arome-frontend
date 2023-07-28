@@ -1,9 +1,45 @@
 body{
     margin: 0;
+    padding-top: 70px;
     padding: 0;
     overflow-x: hidden;
    background-color :rgb(214, 230, 240);
+
 }
+
+/* navigation bar css */
+
+    /* Customize the navigation bar style */
+    .navbar {
+
+      background-color: white;
+    }
+
+    .nav-item a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .nav-item a:hover {
+      color: #FF1A5B;
+    }
+
+    .navbar .navbar-brand,
+    .navbar .nav-link {
+      color: black
+    }
+
+    .navbar .nav-link:hover {
+      color: #FF1A5B;
+    }
+
+    .content-container {
+      padding-top: 60px;
+    }
+
+
+/* navigation bar css finished */
+
 .intro {
     padding: 30px;
     margin-top: 40px;
@@ -366,7 +402,7 @@ label[for="cv"]:hover {
 
     max-width: calc(100% - 40px);
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
     border-radius: 20px;
     background-color: #f0f0f0;
 
@@ -549,3 +585,29 @@ input[type="submit"] {
   .admin-container .row .col:last-child { 
     flex: 1;
   }
+
+
+  /* Course page css  */
+
+  /* Custom CSS */
+.course-material {
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+.btn-download {
+    background-color: #FF1A5B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.btn-download:hover {
+    background-color: #4741FF;
+}
+
+
+.table-borderless td,
+.table-borderless th {
+    border: none; /* Remove table borders */
+}
+
+  /* Course page css finished */
