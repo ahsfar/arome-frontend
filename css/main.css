@@ -441,10 +441,7 @@ table {
 
   }
   td {
-    border: 1px solid grey;
-    padding: 10px;
-    text-align: center;
-    margin: 10px;
+    border: none;
   }
   button {
     background-color: #4CAF50;
@@ -467,9 +464,9 @@ table {
   }
   
   input[type="file"] {
-    display: none;
     margin-bottom: 10px;
   }
+
 
   label[for="work"] {
   background-color: #ef806c;
